@@ -1,0 +1,12 @@
+<p>list works!</p>
+<div *ngIf="cars.length > 0; then carList; else noCarList"> </div>
+<ng-template #carList>
+    <ul>
+        <li *ngFor="let carName of cars">
+            {{ carName }}
+        </li>
+    </ul>
+</ng-template>
+<ng-template #noCarList>
+    <p>No Data is available</p>
+</ng-template>
